@@ -1,1 +1,3 @@
-<%= @message1 %>
+<% @message.each do |message| %>
+<%= message.content %>
+<% end %>

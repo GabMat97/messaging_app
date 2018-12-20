@@ -6,7 +6,7 @@ require 'rspec'
 
 ENV['RACK_ENV'] = 'test'
 
-Capybara.app = Messages
+Capybara.app = Messenger
 
 
 

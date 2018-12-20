@@ -1,7 +1,21 @@
+<!DOCTYPE html>
+<html>
+<center>
+<head>
 <h1>Messaging app</h1>
-<form action="/messages" method="post">
+</head>
+<body>
+<form action="/storing-message" method="post">
 <div>
-<input type="text" name="input_message" placeholder="insert message here">
+<textarea name="message" placeholder="insert message here"></textarea>
 <input type="submit" value="Submit">
 </div>
 </form>
+<% @message.reverse.each do |message| %>
+<div><a id="fullmessage" href="/full-message">
+  <%= message.content.slice(0, 19) %> at <%= message.time %>
+<% end %>
+</a>
+</body>
+</center>
+</html>
